@@ -40,7 +40,7 @@ class Unit:
         for i in range(hallway):
             print("working")
 
-
+# redundant
 class Unit():
     GraveRobber = unit()
     GraveRobber.health = 20.0
