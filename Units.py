@@ -1,50 +1,61 @@
 # This file defines and represents what a unit is
+from binarytree import build
 
-class Unit:
+class Unittype:
     """ The Definition of A unit """
-
+    # 18 type objects with unique values
     # things that make up a unit
+    # needs a retraval function for every type of information used by a character
     player = ["Class"]
+    """
     player.health = 20.0
     player.sanity = 10.0
     player.name = name
     player.ability = [6]
+    """
 
     def __init__(self, health, sanity):
         self.health = health
         self.sanity = sanity
 
-    def __int__(self, stats):
-        self.Acc = 0
-        self.Crit = 0
-        self.DMG = 0
-        self.Dodge = 0
-        self.Prot = 0
-        self.Spd =0
+    def __int__(self, accuracy, critical, damage, dodge, protect, speed):
+        self.accuracy = get.accuracy
+        self.critical = get.critical
+        self.damage = get.damage
+        self.dodge = get.dodge
+        self.protect = get.protect
+        self.speed = get.speed
 
     def command(self, turn):
-        if turn == self.name:
-            self.attack(1)
-        elif turn == self.name:
-            self.attack(2)
-        elif turn == self.name:
-            self.attack(3)
-        elif turn == self.name:
-            self.attack(4)
-        elif turn == self.name: # this option represents changing places with another ally
-            self.attack(5)
-        else:
-            self.name: "cancel"
+        pass
+        # array for all ability that can be used
 
-    def movment(self):
-        for i in range(hallway):
-            print("working")
+
+
+class character:
+    pass
+    # need to receive data from unit type class
+    # take name
+    # take inital actions
+    # put in array that can change over time depending on what abilitys it knows or learns
+    # pointer to unit type object to use get functions
+    # also needs to grab the abilitys in use an array of 4
 
 # redundant
-class Unit():
-    GraveRobber = unit()
-    GraveRobber.health = 20.0
-    GraveRobber.sanity = 10.0
-    GraveRobber.name = wilma
-    GraveRobber.ability = [6]
+class test:
+    # binary tree of unit types needs to search for the type it wants to referance abilitys
+    # List of nodes
+    nodes = [3, 6, 8, 2, 11, None, 13]
+    # Building the binary tree
+    binary_tree = build(nodes)
+    print('Binary tree from list :\n',
+          binary_tree)
+    print('\nList from binary tree :',
+          binary_tree.values)
+    # also can use sorted array
+    # create
 
+
+class party:
+    pass
+    # controls the party movement and interactions
