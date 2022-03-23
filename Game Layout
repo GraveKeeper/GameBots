@@ -1,0 +1,83 @@
+Plan: Make a bot that can play the game darkest dungeon or Age of Empires
+
+Needs to learn how to play and win with minimal losses in darkest dungeon while progressing though levels and acquiring loot with minimal loss of unit health and sanity.
+
+Needs to keep track of
+	 Units
+		Health
+			Goes up and down
+		Ability's
+			Every unit has 4 starting abilities and 8 overall that can be unlocked
+		Sanity
+			 low sanity can lead to negative perks
+		Unit type
+			18 unit/adventure types
+	Environment
+		Doors
+			Previous
+			Next room
+				Both can be right or left
+		Corridor segment
+			Interactable objects
+				Curios
+				Obstacles
+		Secret room
+
+	Weapons
+		Blacksmith menu
+			Requires Gold
+			Correct level
+			Proper resolve
+	Armor
+		Blacksmith Menu
+			Requires Gold
+			Resolve Level
+	Curios
+		Must  be clicked on to interact with
+		Can be interacted with by just clicking or an item can be used in some cases
+		Forced interactions in some cases
+			Effects
+				Stress inflictions
+				Healing
+				Bleeding
+				Blighting
+				Application of buffs
+				Applications of Debuff's
+				Gaining of Quirks
+				Removal of Quirks
+	Trinkets
+		Equippable Item
+			Earned from Nomad Wagon
+			Rewards from Quest
+			Adventuring in dungeon
+				Put on hero to increase stats of units
+					Tiers of Rarity
+	Town events
+		Happen in the Hamlet
+			Can be good or bad
+	Camping skills
+		Can be used while camping in a dungeon
+			Learned from the survivalist
+				3 types of abilities
+					Self
+					All companions
+					One companion
+	Dungeon interactions
+		Curios
+	Locations
+		Many Don’t want to list them
+	Quirks
+		Positive
+			Max 5
+				If you obtain another positive it will replace a random perk
+		Negative
+			Max 5
+				If you obtain another negative it will replace a random perk
+		Removal
+			Sanitarium
+	Monsters
+		1 space wide units
+		2 space wide units
+		Barriers
+		Bosses
+
