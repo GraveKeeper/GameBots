@@ -30,3 +30,10 @@ class Unit:
         if turn == self.name
             self.attack(1)
         elif turn == self.health
+            self.attack(2)
+        elif turn == self.health
+            self.attack(3)
+        elif turn == self.health
+            self.attack(4)
+        else:
+            self.name "pass turn"
