@@ -13,11 +13,12 @@ class Unittype:
     player.name = name
     player.ability = [6]
     """
-
+    # information for all characters
     def __init__(self, health, sanity):
         self.health = health
         self.sanity = sanity
 
+    # character attributes
     def __int__(self, accuracy, critical, damage, dodge, protect, speed):
         self.accuracy = get.accuracy
         self.critical = get.critical
@@ -31,13 +32,16 @@ class Unittype:
         # array for all ability that can be used
 
 
-
-class character:
-    pass
+class Character:
     # need to receive data from unit type class
-    # take name
+    # take name of characters from screen
+    def __init__(self, name, type):
+        self.name = get.name
+        self.type = get.type
     # take inital actions
     # put in array that can change over time depending on what abilitys it knows or learns
+    names = [2]
+    names.append(self.name)
     # pointer to unit type object to use get functions
     # also needs to grab the abilitys in use an array of 4
 
@@ -45,7 +49,7 @@ class character:
 class test:
     # binary tree of unit types needs to search for the type it wants to referance abilitys
     # List of nodes
-    nodes = [3, 6, 8, 2, 11, None, 13]
+    nodes = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 8, 10, 11, 12, 13, 14, 15, 16, 17]
     # Building the binary tree
     binary_tree = build(nodes)
     print('Binary tree from list :\n',
