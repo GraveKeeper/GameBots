@@ -30,6 +30,7 @@ class Unittype:
     def command(self, turn):
         pass
         # array for all ability that can be used
+        # there are 144 unique
 
 
 class Character:
