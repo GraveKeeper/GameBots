@@ -1,65 +1,55 @@
 # This file defines and represents what a unit is
-from binarytree import build
+# from binarytree import build
+# global list of all character/unit types
+CharacterList = ('Abomination', 'Antiquarian', 'Arbalest', 'Bark', 'Bounty Hunter',
+                 'Crusader', 'Flagellant', 'Grave Robber', 'Hellion', 'Highwayman', 'Houndmaster',
+                 'Jester', 'Leper', 'Man-at-Arms', 'Musketeer', 'Occultist', 'Plague Doctor',
+                 'Shieldbreaker', 'Vestal')
 
-class Unittype:
+
+class Unit(object):
     """ The Definition of A unit """
+
     # 18 type objects with unique values
     # things that make up a unit
-    # needs a retraval function for every type of information used by a character
-    player = ["Class"]
-    """
-    player.health = 20.0
-    player.sanity = 10.0
-    player.name = name
-    player.ability = [6]
-    """
-    # information for all characters
-    def __init__(self, health, sanity):
+    # needs a retrieval function for every type of information used by a character
+
+    # character attributes
+    def __init__(self, accuracy, critical, damage, dodge, protect, speed, health, sanity):
+        self.accuracy = accuracy
+        self.critical = critical
+        self.damage = damage
+        self.dodge = dodge
+        self.protect = protect
+        self.speed = speed
         self.health = health
         self.sanity = sanity
 
-    # character attributes
-    def __int__(self, accuracy, critical, damage, dodge, protect, speed):
-        self.accuracy = get.accuracy
-        self.critical = get.critical
-        self.damage = get.damage
-        self.dodge = get.dodge
-        self.protect = get.protect
-        self.speed = get.speed
-
-    def command(self, turn):
-        pass
-        # array for all ability that can be used
+    # array for all ability that can be used
+    def abilities(self, turn):
+        self.turn = turn(1, 2, 3, 4, 5, 6)
+        # there are 144 unique ability's
 
 
-class Character:
-    # need to receive data from unit type class
-    # take name of characters from screen
+# subclass of unit that should be able to grab a unit type
+class UnitType(Unit):
     def __init__(self, name, type):
-        self.name = get.name
-        self.type = get.type
-    # take inital actions
-    # put in array that can change over time depending on what abilitys it knows or learns
-    names = [2]
-    names.append(self.name)
-    # pointer to unit type object to use get functions
-    # also needs to grab the abilitys in use an array of 4
-
-# redundant
-class test:
-    # binary tree of unit types needs to search for the type it wants to referance abilitys
-    # List of nodes
-    nodes = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 8, 10, 11, 12, 13, 14, 15, 16, 17]
-    # Building the binary tree
-    binary_tree = build(nodes)
-    print('Binary tree from list :\n',
-          binary_tree)
-    print('\nList from binary tree :',
-          binary_tree.values)
-    # also can use sorted array
-    # create
+        self.name = name
+        self.type = type
+    super().__init__(accuracy, critical, damage, dodge, protect, speed, health, sanity)
 
 
-class party:
+class Party:
     pass
     # controls the party movement and interactions
+
+# things I probably don't need
+# class Character:
+# need to receive data from unit type class
+# take name of characters from screen
+# take initial actions
+# put in array that can change over time depending on what ability's it knows or learns
+# names = [2]
+# names.append(self.name)
+# pointer to unit type object to use get functions
+# also needs to grab the ability's in use an array of 4

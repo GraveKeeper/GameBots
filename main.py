@@ -1,4 +1,6 @@
-#run command maybe ?
-#not sure if this works like c++
+# main run file for the moment might change
+import Units as units
 
-# when program
+unit = units.Unit('acc', 'crit', 100, 50, 10, 60, 100, 100)
+unit.accuracy = 'cca'
+print(unit.accuracy)
