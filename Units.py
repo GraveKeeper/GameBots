@@ -36,7 +36,7 @@ class UnitType(Unit):
     def __init__(self, name, type):
         self.name = name
         self.type = type
-    super().__init__(accuracy, critical, damage, dodge, protect, speed, health, sanity)
+        super().__init__(name, type)
 
 
 class Party:
